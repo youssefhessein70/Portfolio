@@ -279,7 +279,7 @@ function Nav() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-4xl md:text-[5vw] font-medium tracking-tight hover:opacity-40 transition-opacity"
+                    className="text-3xl md:text-5xl font-medium tracking-tight hover:opacity-40 transition-opacity"
                   >
                     {item.label}
                   </a>
@@ -333,10 +333,10 @@ export default function App() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="z-10 text-center"
           >
-            <h1 className="text-7xl md:text-[10vw] font-bold tracking-tight leading-[0.8] mb-8">
-              Youssef Hussein
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[0.9] mb-8">
+              Youssef Hussein Profile
             </h1>
-            <p className="text-lg md:text-2xl text-white/40 tracking-tight font-medium max-w-xl mx-auto uppercase tracking-[0.4em]">
+            <p className="text-base md:text-xl text-white/40 tracking-tight font-medium max-w-xl mx-auto uppercase tracking-[0.4em]">
               Front-End Developer
             </p>
           </motion.div>
@@ -354,7 +354,7 @@ export default function App() {
         <section id="work" className="py-32 md:py-60">
           <header className="mb-20 md:mb-32">
              <h2 className="text-xs font-bold tracking-[0.6em] uppercase mb-8 text-white/30">LATEST WORK</h2>
-             <p className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.1]">
+             <p className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-[1.1]">
                 Helping businesses build scalable, high-converting digital storefronts.
              </p>
           </header>
@@ -374,7 +374,7 @@ export default function App() {
             </div>
             
             <div className="space-y-40">
-              <p className="text-3xl md:text-5xl font-medium leading-[1.2] tracking-tight">
+              <p className="text-2xl md:text-4xl font-medium leading-[1.2] tracking-tight">
                 I’m a Front-End Developer with 3+ years of experience specialize in <span className="text-white/40">Shopify, Salla, WordPress, and Webflow</span>. I focus on bridging the gap between design and functionality to deliver seamless user experiences.
               </p>
 
@@ -420,11 +420,11 @@ export default function App() {
                   key={link.label}
                   whileHover={{ x: 30 }}
                   href={link.href} 
-                  target="_blank"
-                  className="py-10 border-b border-white/5 text-6xl md:text-[10vw] font-bold tracking-tighter hover:text-white/40 transition-colors block group flex justify-between items-center"
+                  target={link.href.startsWith('mailto:') ? undefined : "_blank"}
+                  className="py-8 border-b border-white/5 text-4xl md:text-6xl font-bold tracking-tighter hover:text-white/40 transition-colors block group flex justify-between items-center"
                 >
                   {link.label}
-                  <ChevronRight size={60} className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ChevronRight size={40} className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.a>
               ))}
             </div>
