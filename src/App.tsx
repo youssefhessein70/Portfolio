@@ -24,23 +24,19 @@ const PROJECTS = [
     category: "Shopify",
     items: [
       { name: "Vie Pharmaceuticals", url: "https://viepharmaceuticals.com/", label: "Shopify Store" },
-      { name: "Smart Clean Eg", url: "https://smartcleaneg.com/", label: "Shopify Store" },
+    
       { name: "Bayan Cloud Kw", url: "https://bayancloudkw.com/", label: "Shopify Store" },
-      { name: "Beais Watches", url: "https://beaiswatches.com/", label: "Shopify Store" },
+     
     ]
   },
   {
     category: "Salla",
     items: [
       { name: "Symphony Perfume", url: "https://symphony-perfume.com/", label: "Salla Store" },
-      { name: "Kafil", url: "https://kafil.org.sa/", label: "Salla Store" },
       { name: "Assaloon", url: "https://assaloon.com/ar", label: "Salla Store" },
       { name: "Bayan Cloud Sa", url: "https://bayancloud-sa.com/", label: "Salla Store" },
       { name: "Pandoz", url: "https://pandoz.sa/ar/", label: "Salla Store" },
       { name: "Almajd", url: "https://almajd.com.sa/", label: "Salla Store" },
-      { name: "Asabaya", url: "https://asabaya.com/", label: "Salla Store" },
-      { name: "Tactical", url: "https://tactical.sa/", label: "Salla Store" },
-      { name: "Teeb Alwedad", url: "https://teebalwedad.com/", label: "Salla Store" },
       { name: "Eten Brand", url: "https://etenbrand.com/", label: "Salla Store" },
       { name: "Berghoff Sa", url: "https://berghoffsa.com/", label: "Salla Store" },
     ]
@@ -48,9 +44,8 @@ const PROJECTS = [
   {
     category: "WordPress",
     items: [
-      { name: "Nawar Microspine", url: "https://nawarmicrospine.com/", label: "WordPress Store" },
-      { name: "Primeraxis", url: "https://primeraxis.com/", label: "WordPress Store" },
-      { name: "Hamat Towers", url: "https://hamattowers.com/en/home-badge/", label: "WordPress Store" },
+      { name: "Banybiz-Alibaba", url: "https://banybiz.com/professional-path-for-importing-from-alibaba-new/", label: "WordPress Store" },
+      { name: "Banybiz", url: "https://banybiz.com/", label: "WordPress Store" },
       { name: "Aglf", url: "https://aglf.sa/", label: "WordPress Store" },
     ]
   },
@@ -140,8 +135,7 @@ function ProjectCard({ project }: { project: any }) {
     >
       <div className="relative aspect-[16/10] mb-6 overflow-hidden rounded-xl bg-[#0a0a0a] border border-white/5 group-hover:border-white/20 transition-all duration-500">
         {(loading || !imageLoaded) && !imageError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-neutral-900">
-            <div className="text-6xl font-bold text-white/[0.03] absolute select-none tracking-tighter">{initials}</div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-neutral-900 z-10">
             <div className="w-6 h-6 border-2 border-white/5 border-t-white/20 rounded-full animate-spin" />
           </div>
         )}
@@ -156,13 +150,13 @@ function ProjectCard({ project }: { project: any }) {
             referrerPolicy="no-referrer"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-neutral-900 to-black">
-             <div className="text-8xl font-bold text-white/[0.03] uppercase select-none tracking-tighter">{initials}</div>
+          <div className="absolute inset-0 flex items-center justify-center bg-neutral-900">
+             {/* Text removed as requested */}
           </div>
         )}
         
-        {/* Overlay Label */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
+        {/* Overlay Label - Hidden on mobile as requested or to prevent covering */}
+        <div className="hidden md:flex absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex-col justify-end p-6">
            <p className="text-white text-xs font-bold tracking-[0.2em] uppercase mb-2">Launch Store</p>
            <div className="h-[1px] w-12 bg-white origin-left group-hover:scale-x-100 scale-x-0 transition-transform duration-500" />
         </div>
@@ -225,7 +219,7 @@ function ProjectCarousel({ category, items }: { category: string; items: any[] }
       
       <div 
         ref={scrollRef}
-        className="flex gap-10 overflow-x-auto hide-scrollbar snap-x scroll-px-0 custom-scrollbar pb-12"
+        className="flex gap-10 overflow-x-auto hide-scrollbar snap-x scroll-px-0 custom-scrollbar pb-12 -mx-6 md:mx-0 px-6 md:px-0"
       >
         {items.map((project, idx) => (
           <ProjectCard key={idx} project={project} />
