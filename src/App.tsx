@@ -22,9 +22,7 @@ import * as THREE from "three";
 const PROJECTS = [
   {
     category: "Shopify",
-    items: [
-      { name: "Vie Pharmaceuticals", url: "https://viepharmaceuticals.com/", label: "Shopify Store" },
-    
+    items: [    
       { name: "Bayan Cloud Kw", url: "https://bayancloudkw.com/", label: "Shopify Store" },
      
     ]
@@ -38,15 +36,13 @@ const PROJECTS = [
       { name: "Pandoz", url: "https://pandoz.sa/ar/", label: "Salla Store" },
       { name: "Almajd", url: "https://almajd.com.sa/", label: "Salla Store" },
       { name: "Eten Brand", url: "https://etenbrand.com/", label: "Salla Store" },
-      { name: "Berghoff Sa", url: "https://berghoffsa.com/", label: "Salla Store" },
+      { name: "Berghoff", url: "https://berghoffmena.com/", label: "Salla Store" },
     ]
   },
   {
     category: "WordPress",
     items: [
-      { name: "Banybiz-Alibaba", url: "https://banybiz.com/professional-path-for-importing-from-alibaba-new/", label: "WordPress Store" },
       { name: "Banybiz", url: "https://banybiz.com/", label: "WordPress Store" },
-      { name: "Aglf", url: "https://aglf.sa/", label: "WordPress Store" },
     ]
   },
   {
@@ -55,7 +51,27 @@ const PROJECTS = [
       { name: "The Pro English", url: "https://www.theproenglish.io/", label: "Webflow Site" },
       { name: "Pro Eng Preview", url: "https://pro-eng-cdb967081bb0b66c65c0b6ae42c8b39.webflow.io/", label: "Webflow Site" },
     ]
+  },
+
+    {
+    category: "Custom Code",
+    items: [
+      { name: "Teland", url: "https://teland-store.youssefhussein.online/", label: "Ecommerce Store/react-vite" },
+      { name: "Yotube-project", url: "https://yotube-project.youssefhussein.online/", label: "yotube-project/html/css" },
+      { name: "Todo-app", url: "https://todo-app.youssefhussein.online/", label: "todo-app/html/css/JavaScript" },
+    ]
   }
+  ,
+    {
+    category: "Custom Code Animation",
+    items: [
+      { name: "Teland", url: "https://juicy.youssefhussein.online/", label: "Juicy/react-vite" },
+   
+    ]
+  }
+
+
+
 ];
 
 const SKILLS = ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Node.js", "Express"];
